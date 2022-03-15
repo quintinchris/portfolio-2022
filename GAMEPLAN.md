@@ -3,4 +3,4 @@
 [ ] - come up with general design
 [ ] - pages & components
     - blog?
-    - 
+    - showcase?

@@ -1,14 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import { Homepage } from './pages/Homepage/Homepage';
+import React from 'react'
+import './App.css'
+import { Homepage } from './pages/Homepage/Homepage'
+import { ThemeProvider } from '@mui/material/styles'
+import { defaultTheme } from '../src/styles/theme'
+import CssBaseline from '@mui/material/CssBaseline'
 
 function App() {
-  return (
-    <div className="App">
-      <Homepage />
-    </div>
-  );
+    return (
+        <div className="App">
+            <ThemeProvider theme={defaultTheme}>
+                <CssBaseline />
+                <Homepage />
+            </ThemeProvider>
+        </div>
+    )
 }
 
-export default App;
+export default App
