@@ -11,7 +11,10 @@ export const defaultTheme = createTheme({
             main: boldFlowers.accent,
             dark: boldFlowers.dark,
             contrastText: boldFlowers.conrast,
-        }
+        },
+        background: {
+            default: boldFlowers.dark,
+          }
     },
     // components: {
     //     MuiTypography: {

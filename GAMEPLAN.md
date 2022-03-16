@@ -1,10 +1,14 @@
 [ ] - install jest
 [ ] - install & setup react router
+[ ] - customize webpack config
+        - add aliases
 [ ] - add error boundary
 [ ] - come up with general design
-[ ] - pages & components
-    - blog?
-    - showcase?
+
+
+Design
+- add fonts
+- 
 
 Global Components
 - Navbar
@@ -12,6 +16,7 @@ Global Components
 
 Homepage Components
 - Hero ✅
+- About
 - Showcase
 - Resume
 - Contact
