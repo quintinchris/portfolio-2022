@@ -1,5 +1,12 @@
 // to find palettes check out https://colorhunt.co/
 
+interface PaletteColor {
+    light?: string;
+    main: string;
+    dark?: string;
+    contrastText?: string;
+  }  
+
 export const boldFlowers = {
     dark: '#151D3B',
     light: '#DADBBD',
