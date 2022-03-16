@@ -2,6 +2,7 @@ import React from 'react';
 import { Grid } from '@mui/material';
 import { defaultTheme } from '../../../../styles/theme'
 import waves from "../../../../assets/wave3.svg";
+import {Header} from '../../../../components/Header/Header';
 
 const styles = {
     showcase: {
@@ -15,7 +16,11 @@ const styles = {
 export const Showcase: React.FC = () => {
     return (
         <Grid container style={styles.showcase}>
-            blah
+            <Header
+                title="Showcase"
+                variant="h2"
+                color="light" 
+            />
         </Grid>
     )
 }

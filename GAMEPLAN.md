@@ -1,5 +1,6 @@
 [ ] - install jest
 [ ] - install & setup react router
+[ ] - set up react context
 [ ] - customize webpack config
         - add aliases
 [ ] - add error boundary
