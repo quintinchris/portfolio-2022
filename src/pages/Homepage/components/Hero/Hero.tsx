@@ -1,6 +1,6 @@
-import { Grid, Typography } from '@mui/material';
-import React from 'react';
-import waves from "../../../../assets/wave-haikei.svg";
+import { Grid, Typography } from '@mui/material'
+import React from 'react'
+import waves from '../../../../assets/wave-haikei.svg'
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface heroProps {}
@@ -52,4 +52,4 @@ export const Hero: React.FC = (props: heroProps) => {
             </Grid>
         </Grid>
     )
-};
+}

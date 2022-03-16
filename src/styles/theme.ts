@@ -12,9 +12,18 @@ export const defaultTheme = createTheme({
             dark: boldFlowers.dark,
             contrastText: boldFlowers.conrast,
         },
+        secondary: {
+            main: boldFlowers.conrast,
+        },
+        info: {
+            main: boldFlowers.light,
+        },
+        success: {
+            main: boldFlowers.accent,
+        },
         background: {
             default: boldFlowers.dark,
-          }
+        },
     },
     // components: {
     //     MuiTypography: {
