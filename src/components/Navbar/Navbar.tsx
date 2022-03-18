@@ -1,4 +1,4 @@
-import { Grid, AppBar, styled, alpha, InputBase, Button } from '@mui/material';
+import { Grid, AppBar, styled, alpha, InputBase, Button, SvgIcon, Tab } from '@mui/material';
 import React from 'react';
 import { Header } from '../Header';
 import { defaultTheme } from '../../styles/theme';
@@ -17,6 +17,8 @@ import SearchIcon from '@mui/icons-material/Search';
 import CssBaseline from '@mui/material/CssBaseline';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Container from '@mui/material/Container';
+import { CqLogo, CqIcon } from '../Icons/CqLogo'
+
 
 
 // const styles = {
@@ -33,11 +35,17 @@ export const Navbar: React.FC = () => {
                 position="fixed"
                 color="primary"
                 sx={{
-                    height: '8vh',
+                    height: '6vh',
+                    justifyContent: 'center',
                     backgroundColor: defaultTheme.palette.primary.light,
                 }}
             >
-                <Toolbar>
+                <Toolbar sx={{ justifyContent: 'space-between' }}>
+                    {/* <img src="src/assets/cqBlack.svg"></img> */}
+                    {/* <SvgIcon>
+                        cqLogoBlack
+                    </SvgIcon> */}
+                    <CqIcon />
                     <IconButton
                         size="large"
                         edge="start"
@@ -47,14 +55,11 @@ export const Navbar: React.FC = () => {
                     >
                         <MenuIcon />
                     </IconButton>
-                    <Typography
-                        variant="h6"
-                        component="div"
-                        sx={{ flexGrow: 1 }}
-                    >
-                        News
-                    </Typography>
-                    <Button color="inherit">Login</Button>
+                    {/* <Box sx={{ justifyContent: 'space-evenly' }}>
+                        <Button color="inherit">Showcase</Button>
+                        <Button color="inherit">Resume</Button>
+                        <Button color="inherit">Journal</Button>
+                    </Box> */}
                 </Toolbar>
             </AppBar>
         </Box>

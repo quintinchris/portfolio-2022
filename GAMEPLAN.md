@@ -1,22 +1,28 @@
-[ ] - install jest
-[ ] - install & setup react router
-[ ] - set up react context
-[ ] - customize webpack config
-        - add aliases
-[ ] - add error boundary
-[ ] - come up with general design
+Dev Tasks
+----------------
+- install jest and write tests
+- install and setup react-router
+- install error-bounday
+- set up react context manager
+- customize webpack config
+  - add aliases
 
-
-Design
+Design tasks
+-----------------
 - add fonts
-- 
+- add our logo
 
+Front-end tasks
+------------------
 Global Components
 - Navbar
+  - would be cool to make it elevate on scroll
 - Footer
 
 Homepage Components
-- Hero ✅
+- Hero
+  - add something cool that makes it pop
+  - maybe add the github chart thing?
 - About
 - Showcase
 - Resume
@@ -27,3 +33,10 @@ Blog page Components
 - Editor ?
 - comments/questions/responses
 - 
+
+
+Backend?
+------------------
+- contact form will need backend
+- editor would probably need a backend, to save and store posts
+- we can add other cool features if we have a backend
