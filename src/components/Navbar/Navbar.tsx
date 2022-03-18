@@ -21,12 +21,17 @@ import { CqLogo, CqIcon } from '../Icons/CqLogo'
 
 
 
-// const styles = {
-//     navbar: {
-//         height: '6vh',
-//         backgroundColor: defaultTheme.palette.primary.light,
-//     }
-// }
+const styles = {
+    glassyNavbar: {
+        height: '6vh',
+        // backgroundColor: defaultTheme.palette.primary.light,
+        backdropFilter: 'blur(16px) saturate(180%)',
+        // -webkit-backdrop-filter: blur(16px) saturate(180%);
+        backgroundColor: 'rgba(17, 25, 40, 0.75)',
+        borderRadius: '12px',
+        border: '1px solid rgba(255, 255, 255, 0.125)',
+    },
+}
 
 export const Navbar: React.FC = () => {
     return (
@@ -36,8 +41,10 @@ export const Navbar: React.FC = () => {
                 color="primary"
                 sx={{
                     height: '6vh',
+                    width: '100%',
                     justifyContent: 'center',
-                    backgroundColor: defaultTheme.palette.primary.light,
+                    backdropFilter: 'blur(16px) saturate(180%)',
+                    backgroundColor: 'rgba(17, 25, 40, 0.75)',
                 }}
             >
                 <Toolbar sx={{ justifyContent: 'space-between' }}>
@@ -45,13 +52,15 @@ export const Navbar: React.FC = () => {
                     {/* <SvgIcon>
                         cqLogoBlack
                     </SvgIcon> */}
-                    <CqIcon />
+                    {/* <CqIcon /> */}
+                    <Typography variant="h6" color="primary.light" noWrap>
+                        CQ
+                    </Typography>
                     <IconButton
                         size="large"
                         edge="start"
-                        color="inherit"
+                        color="primary"
                         aria-label="menu"
-                        sx={{ mr: 2 }}
                     >
                         <MenuIcon />
                     </IconButton>

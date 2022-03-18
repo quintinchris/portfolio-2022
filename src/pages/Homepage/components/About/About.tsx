@@ -14,7 +14,7 @@ export const About: React.FC = () => {
     return (
         <Grid container style={styles.about}>
             <Grid xs={12}>
-                <Header title="Wait, Who Are You?" variant="h2" color="light" />
+                <Header title="Wait... Who?" variant="h2" color="light" />
             </Grid>
             <Grid>
                 <Typography variant="h4" color="primary.main">
