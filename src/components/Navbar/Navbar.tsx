@@ -53,9 +53,9 @@ export const Navbar: React.FC = () => {
                         cqLogoBlack
                     </SvgIcon> */}
                     {/* <CqIcon /> */}
-                    <div style={styles.logoWrapper}>
+                    <Box style={styles.logoWrapper}>
                         <img src={cq} alt="logo" style={styles.logo} />
-                    </div>
+                    </Box>
                     <IconButton
                         size="large"
                         edge="start"

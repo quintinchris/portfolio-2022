@@ -15,7 +15,7 @@ export const Homepage: React.FC = () => {
     return (
         // <Layout children={children} />
         <Grid>
-            <Navbar />
+            {/* <Navbar /> */}
             <Hero />
             <About />
             <Showcase />

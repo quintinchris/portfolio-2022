@@ -1,10 +1,9 @@
-import { Grid, Typography } from '@mui/material'
+import { Grid, Typography, Box } from '@mui/material'
 import React from 'react'
 import waves from '../../../../assets/wave-haikei.svg'
 import cq from '../../../../assets/cqWhite.png'
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
-export interface heroProps {}
+// export interface heroProps {}
 
 // pull these from scss later
 const styles = {
@@ -30,20 +29,40 @@ const styles = {
         padding: '5vh',
     },
     logo: {
-        marginTop: '20vh',
-        paddingLeft: '2vw',
-        paddingRight: '2vw',
+        marginLeft: '-36vw',
         height: '20%',
-        width: '30%',
-    }
+        width: '15%',
+    },
 }
 
-export const Hero: React.FC = (props: heroProps) => {
+export const Hero: React.FC = () => {
+    const title = "Hi, I'm Chris"
+    // const subtitle = 'I like building things with Typescript, Node, and React'
+    const subtitle = 'I like building projects that improve developer experience and help make consumers lives easier, and I prefer to build them with TS, Node, and React.'
+
     return (
         <Grid container>
             <Grid container className="hero" style={styles.hero}>
-                <Grid item xs={6}>
+                <Grid
+                    item
+                    xs={8}
+                    direction="column"
+                    sx={{
+                        marginTop: '20vh',
+                        justifyContent: 'flex-start',
+                    }}
+                >
+                    <Box>
                     <img src={cq} alt="logo" style={styles.logo} />
+                    </Box>
+                    <Box sx={{ marginLeft: '10vw', marginTop: '4vh', textAlign: 'left' }}>
+                        <Typography variant="h3" color={'primary.light'}>
+                            {title}
+                        </Typography>
+                        <Typography variant="h6" mt={'2vh'} width={'75%'} color={'primary.light'}>
+                            {subtitle}
+                        </Typography>
+                    </Box>
                 </Grid>
                 <Grid item xs={4}></Grid>
                 {/* <Grid item xs={12} style={styles.title}>
