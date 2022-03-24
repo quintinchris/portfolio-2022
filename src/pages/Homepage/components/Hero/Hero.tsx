@@ -1,6 +1,7 @@
 import { Grid, Typography } from '@mui/material'
 import React from 'react'
 import waves from '../../../../assets/wave-haikei.svg'
+import cq from '../../../../assets/cqWhite.png'
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface heroProps {}
@@ -28,13 +29,24 @@ const styles = {
     subtitle: {
         padding: '5vh',
     },
+    logo: {
+        marginTop: '20vh',
+        paddingLeft: '2vw',
+        paddingRight: '2vw',
+        height: '20%',
+        width: '30%',
+    }
 }
 
 export const Hero: React.FC = (props: heroProps) => {
     return (
         <Grid container>
             <Grid container className="hero" style={styles.hero}>
-                <Grid item xs={12} style={styles.title}>
+                <Grid item xs={6}>
+                    <img src={cq} alt="logo" style={styles.logo} />
+                </Grid>
+                <Grid item xs={4}></Grid>
+                {/* <Grid item xs={12} style={styles.title}>
                     <Typography variant="h1" color="primary.light">
                         Hey 👋
                     </Typography>
@@ -48,7 +60,7 @@ export const Hero: React.FC = (props: heroProps) => {
                     >
                         I&apos;m just a dude who builds things with code.
                     </Typography>
-                </Grid>
+                </Grid> */}
             </Grid>
         </Grid>
     )

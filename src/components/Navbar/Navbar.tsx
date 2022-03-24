@@ -13,7 +13,19 @@ import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
 import BookIcon from '@mui/icons-material/Book';
 import TerminalIcon from '@mui/icons-material/Terminal';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import { CqLogo, CqIcon } from '../Icons/CqLogo'
+import cq from '../../assets/cqWhite.png';
+
+const styles = {
+    logo: {
+        width: '20%',
+        height: '20%',
+        // marginLeft: '0',
+    },
+    logoWrapper: {
+        marginLeft: '-2vw',
+        width: '8vw',
+    }
+};
 
 export const Navbar: React.FC = () => {
     const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null)
@@ -41,9 +53,9 @@ export const Navbar: React.FC = () => {
                         cqLogoBlack
                     </SvgIcon> */}
                     {/* <CqIcon /> */}
-                    <Typography variant="h6" color="primary.light" noWrap>
-                        CQ
-                    </Typography>
+                    <div style={styles.logoWrapper}>
+                        <img src={cq} alt="logo" style={styles.logo} />
+                    </div>
                     <IconButton
                         size="large"
                         edge="start"
@@ -53,36 +65,36 @@ export const Navbar: React.FC = () => {
                     >
                         <MenuIcon />
                         <Menu
-                                elevation={0}
-                                anchorOrigin={{
-                                    vertical: 'bottom',
-                                    horizontal: 'right',
-                                }}
-                                transformOrigin={{
-                                    vertical: 'top',
-                                    horizontal: 'right',
-                                }}
-                                anchorEl={anchorEl}
-                                open={open}
-                                onClose={handleClick}
-                            >
-                                <MenuItem onClick={handleClick} disableRipple>
-                                    <ArticleIcon />
-                                    Resume
-                                </MenuItem>
-                                <MenuItem onClick={handleClick} disableRipple>
-                                    <BookIcon />
-                                    Journal
-                                </MenuItem>
-                                <MenuItem onClick={handleClick} disableRipple>
-                                    <TerminalIcon />
-                                    Snippets
-                                </MenuItem>
-                                <MenuItem onClick={handleClick} disableRipple>
-                                    <RocketLaunchIcon />
-                                    Projects
-                                </MenuItem>
-                            </Menu>
+                            elevation={0}
+                            anchorOrigin={{
+                                vertical: 'bottom',
+                                horizontal: 'right',
+                            }}
+                            transformOrigin={{
+                                vertical: 'top',
+                                horizontal: 'right',
+                            }}
+                            anchorEl={anchorEl}
+                            open={open}
+                            onClose={handleClick}
+                        >
+                            <MenuItem onClick={handleClick} disableRipple>
+                                <ArticleIcon />
+                                Resume
+                            </MenuItem>
+                            <MenuItem onClick={handleClick} disableRipple>
+                                <BookIcon />
+                                Journal
+                            </MenuItem>
+                            <MenuItem onClick={handleClick} disableRipple>
+                                <TerminalIcon />
+                                Snippets
+                            </MenuItem>
+                            <MenuItem onClick={handleClick} disableRipple>
+                                <RocketLaunchIcon />
+                                Projects
+                            </MenuItem>
+                        </Menu>
                     </IconButton>
                 </Toolbar>
             </AppBar>
