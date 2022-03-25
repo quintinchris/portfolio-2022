@@ -20,6 +20,19 @@ const styles = {
         backgroundColor: '#151d3b',
         backgroundImage: 'linear-gradient(180deg, #151d3b 75%, #d82148 100%)',
     },
+    sunsetGradient: {
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        height: '100vh',
+        backgroundColor: '#4158D0',
+        backgroundImage: 'linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%)',
+    },
+    solidHero: {
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        height: '100vh',
+        backgroundColor: '#141E27',
+    },
     title: {
         paddingTop: '10vh',
         paddingLeft: '2vw',
@@ -38,14 +51,14 @@ const styles = {
 export const Hero: React.FC = () => {
     const title = "Hi, I'm Chris"
     // const subtitle = 'I like building things with Typescript, Node, and React'
-    const subtitle = 'I like building projects that improve developer experience and help make consumers lives easier, and I prefer to build them with TS, Node, and React.'
+    const subtitle = 'I like building projects that improve developer experience or solve problems for consumers, and my preferred tools are TS, Node, and React.'
 
     return (
         <Grid container>
-            <Grid container className="hero" style={styles.hero}>
+            <Grid container className="hero" style={styles.solidHero}>
                 <Grid
                     item
-                    xs={8}
+                    md={8}
                     direction="column"
                     sx={{
                         marginTop: '20vh',

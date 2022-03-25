@@ -1,5 +1,5 @@
 import { AppBar } from '@mui/material';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
@@ -14,6 +14,7 @@ import BookIcon from '@mui/icons-material/Book';
 import TerminalIcon from '@mui/icons-material/Terminal';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import cq from '../../assets/cqWhite.png';
+import { useScrollPosition } from '../../services/hooks/useScrollPosition'
 
 const styles = {
     logo: {
@@ -28,14 +29,21 @@ const styles = {
 };
 
 export const Navbar: React.FC = () => {
-    const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null)
+    const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
+    const [visible, setVisibile] = useState(false);
     const open = Boolean(anchorEl);
+    const scrollPosition = useScrollPosition();
+
     const handleClick = (event: React.MouseEvent<HTMLElement>) => {
         open ? setAnchorEl(null) : setAnchorEl(event.currentTarget)
     }
+    
+    useEffect(() => {
+        scrollPosition > 380 ? setVisibile(true) : setVisibile(false);
+    }, [scrollPosition]);
 
     return (
-        <Box sx={{ flexGrow: 1 }}>
+        <Box sx={{ flexGrow: 1, visibility: `${visible ? 'visible' : 'hidden'}`}}>
             <AppBar
                 position="fixed"
                 color="primary"
@@ -48,11 +56,6 @@ export const Navbar: React.FC = () => {
                 }}
             >
                 <Toolbar sx={{ justifyContent: 'space-between' }}>
-                    {/* <img src="src/assets/cqBlack.svg"></img> */}
-                    {/* <SvgIcon>
-                        cqLogoBlack
-                    </SvgIcon> */}
-                    {/* <CqIcon /> */}
                     <Box style={styles.logoWrapper}>
                         <img src={cq} alt="logo" style={styles.logo} />
                     </Box>
