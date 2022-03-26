@@ -2,6 +2,9 @@ import { Grid, Typography, Box } from '@mui/material'
 import React from 'react'
 import waves from '../../../../assets/wave-haikei.svg'
 import cq from '../../../../assets/cqWhite.png'
+import GitHubIcon from '@mui/icons-material/GitHub'
+import TwitterIcon from '@mui/icons-material/Twitter'
+import LinkedInIcon from '@mui/icons-material/LinkedIn'
 
 // export interface heroProps {}
 
@@ -51,7 +54,7 @@ const styles = {
 export const Hero: React.FC = () => {
     const title = "Hi, I'm Chris"
     // const subtitle = 'I like building things with Typescript, Node, and React'
-    const subtitle = 'I like building projects that improve developer experience or solve problems for consumers, and my preferred tools are TS, Node, and React.'
+    const subtitle = 'I enjoy building projects that improve developer experience or solve problems for consumers, and my preferred tools are TS, Node, and React.'
 
     return (
         <Grid container>
@@ -61,7 +64,7 @@ export const Hero: React.FC = () => {
                     md={8}
                     direction="column"
                     sx={{
-                        marginTop: '20vh',
+                        marginTop: '30vh',
                         justifyContent: 'flex-start',
                     }}
                 >
@@ -77,7 +80,13 @@ export const Hero: React.FC = () => {
                         </Typography>
                     </Box>
                 </Grid>
-                <Grid item xs={4}></Grid>
+                <Grid item xs={4}>
+                    <Box sx={{alignSelf: 'flex-start', marginTop: '6vh', justifyContent: 'space-between'}}>
+                        <GitHubIcon fontSize="large" style={{ color: 'white', marginRight: '2vw', cursor: 'pointer' }} />
+                        <TwitterIcon fontSize="large" style={{ color: 'white', marginRight: '2vw', cursor: 'pointer' }} />
+                        <LinkedInIcon fontSize="large" style={{ color: 'white', cursor: 'pointer' }} />
+                    </Box>
+                </Grid>
                 {/* <Grid item xs={12} style={styles.title}>
                     <Typography variant="h1" color="primary.light">
                         Hey 👋

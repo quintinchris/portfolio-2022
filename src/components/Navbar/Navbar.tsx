@@ -39,9 +39,10 @@ export const Navbar: React.FC = () => {
     }
     
     useEffect(() => {
-        scrollPosition > 380 ? setVisibile(true) : setVisibile(false);
+        scrollPosition > 444 ? setVisibile(true) : setVisibile(false);
     }, [scrollPosition]);
 
+    // Note: need to refactor to not use visibile/hidden, they aren't transitionable properties: https://stackoverflow.com/questions/27900053/css-transition-with-visibility-not-working
     return (
         <Box sx={{ flexGrow: 1, visibility: `${visible ? 'visible' : 'hidden'}`}}>
             <AppBar
