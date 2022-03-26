@@ -99,7 +99,7 @@ export const Hero: React.FC = () => {
                         </Typography>
                     </Box>
                 </Grid>
-                <Grid item xs={4}>
+                <Grid item md={4}>
                     <Box
                         sx={{
                             alignSelf: 'flex-start',
@@ -144,21 +144,6 @@ export const Hero: React.FC = () => {
                         />
                     </Box>
                 </Grid>
-                {/* <Grid item xs={12} style={styles.title}>
-                    <Typography variant="h1" color="primary.light">
-                        Hey 👋
-                    </Typography>
-                    <Typography variant="h1" color="primary.light">
-                        I&apos;m Chris
-                    </Typography>
-                    <Typography
-                        variant="h4"
-                        color="primary.main"
-                        style={styles.subtitle}
-                    >
-                        I&apos;m just a dude who builds things with code.
-                    </Typography>
-                </Grid> */}
             </Grid>
         </Grid>
     )

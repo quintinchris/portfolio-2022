@@ -18,15 +18,26 @@ import { useScrollPosition } from '../../services/hooks/useScrollPosition'
 
 const styles = {
     logo: {
-        width: '20%',
+        width: '20px',
         height: '20%',
+        cursor: 'pointer',
+        '&:hover': {
+            transition: 'transform 0.2s ease-in-out',
+            transform: 'scale(1.2)',
+        },
         // marginLeft: '0',
     },
     logoWrapper: {
-        marginLeft: '-2vw',
-        width: '8vw',
-    }
-};
+        marginLeft: '-3vw',
+        marginTop: '3px',
+        width: '90px',
+        cursor: 'pointer',
+        '&:hover': {
+            transition: 'transform 0.2s ease-in-out',
+            transform: 'scale(1.2)',
+        },
+    },
+}
 
 export const Navbar: React.FC = () => {
     const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
@@ -39,12 +50,11 @@ export const Navbar: React.FC = () => {
     }
     
     useEffect(() => {
-        scrollPosition > 444 ? setVisibile(true) : setVisibile(false);
+        scrollPosition > 500 ? setVisibile(true) : setVisibile(false);
     }, [scrollPosition]);
 
-    // Note: need to refactor to not use visibile/hidden, they aren't transitionable properties: https://stackoverflow.com/questions/27900053/css-transition-with-visibility-not-working
     return (
-        <Box sx={{ flexGrow: 1, visibility: `${visible ? 'visible' : 'hidden'}`}}>
+        <Box sx={{ flexGrow: 1, opacity: `${visible ? '100' : '0'}`}}>
             <AppBar
                 position="fixed"
                 color="primary"
@@ -54,6 +64,7 @@ export const Navbar: React.FC = () => {
                     justifyContent: 'center',
                     backdropFilter: 'blur(16px) saturate(180%)',
                     backgroundColor: 'rgba(17, 25, 40, 0.75)',
+                    transition: 'height 1s'
                 }}
             >
                 <Toolbar sx={{ justifyContent: 'space-between' }}>
