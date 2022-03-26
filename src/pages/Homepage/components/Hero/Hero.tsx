@@ -28,7 +28,8 @@ const styles = {
         backgroundPosition: 'center',
         height: '100vh',
         backgroundColor: '#4158D0',
-        backgroundImage: 'linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%)',
+        backgroundImage:
+            'linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%)',
     },
     solidHero: {
         backgroundSize: 'cover',
@@ -49,12 +50,19 @@ const styles = {
         height: '20%',
         width: '15%',
     },
+    buttons: {
+        '&:hover': {
+            transition: 'transform 0.2s ease-in-out',
+            transform: 'scale(2)',
+        },
+    },
 }
 
 export const Hero: React.FC = () => {
     const title = "Hi, I'm Chris"
     // const subtitle = 'I like building things with Typescript, Node, and React'
-    const subtitle = 'I enjoy building projects that improve developer experience or solve problems for consumers, and my preferred tools are TS, Node, and React.'
+    const subtitle =
+        'I enjoy building projects that improve developer experience or solve problems for consumers, and my preferred tools are TS, Node, and React.'
 
     return (
         <Grid container>
@@ -69,22 +77,71 @@ export const Hero: React.FC = () => {
                     }}
                 >
                     <Box>
-                    <img src={cq} alt="logo" style={styles.logo} />
+                        <img src={cq} alt="logo" style={styles.logo} />
                     </Box>
-                    <Box sx={{ marginLeft: '10vw', marginTop: '4vh', textAlign: 'left' }}>
+                    <Box
+                        sx={{
+                            marginLeft: '10vw',
+                            marginTop: '4vh',
+                            textAlign: 'left',
+                        }}
+                    >
                         <Typography variant="h3" color={'primary.light'}>
                             {title}
                         </Typography>
-                        <Typography variant="h6" mt={'2vh'} width={'75%'} color={'primary.light'}>
+                        <Typography
+                            variant="h6"
+                            mt={'2vh'}
+                            width={'75%'}
+                            color={'primary.light'}
+                        >
                             {subtitle}
                         </Typography>
                     </Box>
                 </Grid>
                 <Grid item xs={4}>
-                    <Box sx={{alignSelf: 'flex-start', marginTop: '6vh', justifyContent: 'space-between'}}>
-                        <GitHubIcon fontSize="large" style={{ color: 'white', marginRight: '2vw', cursor: 'pointer' }} />
-                        <TwitterIcon fontSize="large" style={{ color: 'white', marginRight: '2vw', cursor: 'pointer' }} />
-                        <LinkedInIcon fontSize="large" style={{ color: 'white', cursor: 'pointer' }} />
+                    <Box
+                        sx={{
+                            alignSelf: 'flex-start',
+                            marginTop: '6vh',
+                            justifyContent: 'space-between',
+                        }}
+                    >
+                        <GitHubIcon
+                            fontSize="large"
+                            sx={{
+                                color: 'white',
+                                marginRight: '2vw',
+                                cursor: 'pointer',
+                                '&:hover': {
+                                    transition: 'transform 0.2s ease-in-out',
+                                    transform: 'scale(1.2)',
+                                },
+                            }}
+                        />
+                        <TwitterIcon
+                            fontSize="large"
+                            sx={{
+                                color: 'white',
+                                marginRight: '2vw',
+                                cursor: 'pointer',
+                                '&:hover': {
+                                    transition: 'transform 0.2s ease-in-out',
+                                    transform: 'scale(1.2)',
+                                },
+                            }}
+                        />
+                        <LinkedInIcon
+                            fontSize="large"
+                            sx={{
+                                color: 'white',
+                                cursor: 'pointer',
+                                '&:hover': {
+                                    transition: 'transform 0.2s ease-in-out',
+                                    transform: 'scale(1.2)',
+                                },
+                            }}
+                        />
                     </Box>
                 </Grid>
                 {/* <Grid item xs={12} style={styles.title}>
