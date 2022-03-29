@@ -15,7 +15,7 @@ export interface LayoutProps {
 export const Layout: React.FC<LayoutProps> = (props: LayoutProps) => {
     return (
         <Grid container style={styles.layout}>
-            <Navbar />
+            {/* <Navbar /> */}
             {props.children?.map((child: React.ReactNode, index: number) => {
                 return child
             })}
