@@ -75,6 +75,7 @@ export const Hero: React.FC = () => {
                     }}
                 >
                     <Box
+                        data-testid="icons"
                         sx={{
                             textAlign: 'right',
                             alignSelf: 'flex-end',
@@ -130,7 +131,7 @@ export const Hero: React.FC = () => {
                         textAlign: 'left',
                     }}
                 >
-                    <Box>
+                    <Box data-testid="logo">
                         <img src={cq} alt="logo" style={styles.logo} />
                     </Box>
                     <Box
@@ -153,90 +154,5 @@ export const Hero: React.FC = () => {
                 </Grid>
             </Grid>
         </Grid>
-
-        // COLUMNS
-
-        // <Grid container>
-        //     <Grid container className="hero" style={styles.solidHero}>
-        //         <Grid
-        //             item
-        //             xs={6}
-        //             md={8}
-        //             direction="column"
-        //             sx={{
-        //                 marginTop: '30vh',
-        //                 justifyContent: 'flex-start',
-        //             }}
-        //         >
-        //             <Box>
-        //                 <img src={cq} alt="logo" style={styles.logo} />
-        //             </Box>
-        //             <Box
-        //                 sx={{
-        //                     marginLeft: '10vw',
-        //                     marginTop: '4vh',
-        //                     textAlign: 'left',
-        //                 }}
-        //             >
-        //                 <Typography variant="h3" color={'primary.light'}>
-        //                     {title}
-        //                 </Typography>
-        //                 <Typography
-        //                     variant="h6"
-        //                     mt={'2vh'}
-        //                     width={'75%'}
-        //                     color={'primary.light'}
-        //                 >
-        //                     {subtitle}
-        //                 </Typography>
-        //             </Box>
-        //         </Grid>
-        //         <Grid item xs={4} sm={6} md={8}>
-        //             <Box
-        //                 sx={{
-        //                     alignSelf: 'flex-start',
-        //                     marginTop: '6vh',
-        //                     justifyContent: 'space-between',
-        //                 }}
-        //             >
-        //                 <GitHubIcon
-        //                     fontSize="large"
-        //                     sx={{
-        //                         color: 'white',
-        //                         marginRight: '2vw',
-        //                         cursor: 'pointer',
-        //                         '&:hover': {
-        //                             transition: 'transform 0.2s ease-in-out',
-        //                             transform: 'scale(1.2)',
-        //                         },
-        //                     }}
-        //                 />
-        //                 <TwitterIcon
-        //                     fontSize="large"
-        //                     sx={{
-        //                         color: 'white',
-        //                         marginRight: '2vw',
-        //                         cursor: 'pointer',
-        //                         '&:hover': {
-        //                             transition: 'transform 0.2s ease-in-out',
-        //                             transform: 'scale(1.2)',
-        //                         },
-        //                     }}
-        //                 />
-        //                 <LinkedInIcon
-        //                     fontSize="large"
-        //                     sx={{
-        //                         color: 'white',
-        //                         cursor: 'pointer',
-        //                         '&:hover': {
-        //                             transition: 'transform 0.2s ease-in-out',
-        //                             transform: 'scale(1.2)',
-        //                         },
-        //                     }}
-        //                 />
-        //             </Box>
-        //         </Grid>
-        //     </Grid>
-        // </Grid>
     )
 }

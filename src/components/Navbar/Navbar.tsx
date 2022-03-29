@@ -14,7 +14,7 @@ import BookIcon from '@mui/icons-material/Book';
 import TerminalIcon from '@mui/icons-material/Terminal';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import cq from '../../assets/cqWhite.png';
-import { useScrollPosition } from '../../services/hooks/useScrollPosition'
+import { useScrollPosition } from '../../services/hooks/useScrollPosition/useScrollPosition'
 
 const styles = {
     logo: {
