@@ -39,6 +39,7 @@ const styles = {
 }
 
 export const Navbar: React.FC = () => {
+    const openNavbarTrigger = 600;
     const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
     const [visible, setVisibile] = useState(false);
     const open = Boolean(anchorEl);
@@ -49,12 +50,13 @@ export const Navbar: React.FC = () => {
     }
     
     useEffect(() => {
-        scrollPosition > 600 ? setVisibile(true) : setVisibile(false);
+        scrollPosition > openNavbarTrigger ? setVisibile(true) : setVisibile(false);
     }, [scrollPosition]);
 
     return (
         <Box sx={{ flexGrow: 1, opacity: `${visible ? '100' : '0'}`}}>
             <AppBar
+                data-testid="navbar"
                 position="fixed"
                 color="primary"
                 sx={{
