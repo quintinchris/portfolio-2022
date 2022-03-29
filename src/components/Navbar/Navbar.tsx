@@ -25,7 +25,6 @@ const styles = {
             transition: 'transform 0.2s ease-in-out',
             transform: 'scale(1.2)',
         },
-        // marginLeft: '0',
     },
     logoWrapper: {
         marginLeft: '-3vw',
@@ -50,7 +49,7 @@ export const Navbar: React.FC = () => {
     }
     
     useEffect(() => {
-        scrollPosition > 500 ? setVisibile(true) : setVisibile(false);
+        scrollPosition > 600 ? setVisibile(true) : setVisibile(false);
     }, [scrollPosition]);
 
     return (

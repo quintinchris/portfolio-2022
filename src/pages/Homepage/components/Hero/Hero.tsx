@@ -36,6 +36,7 @@ const styles = {
         backgroundPosition: 'center',
         height: '100vh',
         backgroundColor: '#141E27',
+        justifyContent: 'space-around',
     },
     title: {
         paddingTop: '10vh',
@@ -46,7 +47,6 @@ const styles = {
         padding: '5vh',
     },
     logo: {
-        marginLeft: '-36vw',
         height: '20%',
         width: '15%',
     },
@@ -65,46 +65,21 @@ export const Hero: React.FC = () => {
         'I enjoy building projects that improve developer experience or solve problems for consumers, and my preferred tools are TS, Node, and React.'
 
     return (
-        <Grid container>
+        <Grid container direction={'row'}>
             <Grid container className="hero" style={styles.solidHero}>
                 <Grid
                     item
-                    md={8}
-                    direction="column"
                     sx={{
-                        marginTop: '30vh',
-                        justifyContent: 'flex-start',
+                        width: '100%',
+                        justifyContent: 'flex-end',
                     }}
                 >
-                    <Box>
-                        <img src={cq} alt="logo" style={styles.logo} />
-                    </Box>
                     <Box
                         sx={{
-                            marginLeft: '10vw',
-                            marginTop: '4vh',
-                            textAlign: 'left',
-                        }}
-                    >
-                        <Typography variant="h3" color={'primary.light'}>
-                            {title}
-                        </Typography>
-                        <Typography
-                            variant="h6"
-                            mt={'2vh'}
-                            width={'75%'}
-                            color={'primary.light'}
-                        >
-                            {subtitle}
-                        </Typography>
-                    </Box>
-                </Grid>
-                <Grid item md={4}>
-                    <Box
-                        sx={{
-                            alignSelf: 'flex-start',
+                            textAlign: 'right',
+                            alignSelf: 'flex-end',
                             marginTop: '6vh',
-                            justifyContent: 'space-between',
+                            marginRight: '4vw',
                         }}
                     >
                         <GitHubIcon
@@ -144,7 +119,124 @@ export const Hero: React.FC = () => {
                         />
                     </Box>
                 </Grid>
+                <Grid
+                    item
+                    direction="column"
+                    sx={{
+                        marginTop: '30vh',
+                        marginBottom: '12vh',
+                        justifyContent: 'flex-start',
+                        marginLeft: '10vw',
+                        textAlign: 'left',
+                    }}
+                >
+                    <Box>
+                        <img src={cq} alt="logo" style={styles.logo} />
+                    </Box>
+                    <Box
+                        sx={{
+                            marginTop: '4vh',
+                        }}
+                    >
+                        <Typography variant="h3" color={'primary.light'}>
+                            {title}
+                        </Typography>
+                        <Typography
+                            variant="h6"
+                            mt={'2vh'}
+                            width={'75%'}
+                            color={'primary.light'}
+                        >
+                            {subtitle}
+                        </Typography>
+                    </Box>
+                </Grid>
             </Grid>
         </Grid>
+
+        // COLUMNS
+
+        // <Grid container>
+        //     <Grid container className="hero" style={styles.solidHero}>
+        //         <Grid
+        //             item
+        //             xs={6}
+        //             md={8}
+        //             direction="column"
+        //             sx={{
+        //                 marginTop: '30vh',
+        //                 justifyContent: 'flex-start',
+        //             }}
+        //         >
+        //             <Box>
+        //                 <img src={cq} alt="logo" style={styles.logo} />
+        //             </Box>
+        //             <Box
+        //                 sx={{
+        //                     marginLeft: '10vw',
+        //                     marginTop: '4vh',
+        //                     textAlign: 'left',
+        //                 }}
+        //             >
+        //                 <Typography variant="h3" color={'primary.light'}>
+        //                     {title}
+        //                 </Typography>
+        //                 <Typography
+        //                     variant="h6"
+        //                     mt={'2vh'}
+        //                     width={'75%'}
+        //                     color={'primary.light'}
+        //                 >
+        //                     {subtitle}
+        //                 </Typography>
+        //             </Box>
+        //         </Grid>
+        //         <Grid item xs={4} sm={6} md={8}>
+        //             <Box
+        //                 sx={{
+        //                     alignSelf: 'flex-start',
+        //                     marginTop: '6vh',
+        //                     justifyContent: 'space-between',
+        //                 }}
+        //             >
+        //                 <GitHubIcon
+        //                     fontSize="large"
+        //                     sx={{
+        //                         color: 'white',
+        //                         marginRight: '2vw',
+        //                         cursor: 'pointer',
+        //                         '&:hover': {
+        //                             transition: 'transform 0.2s ease-in-out',
+        //                             transform: 'scale(1.2)',
+        //                         },
+        //                     }}
+        //                 />
+        //                 <TwitterIcon
+        //                     fontSize="large"
+        //                     sx={{
+        //                         color: 'white',
+        //                         marginRight: '2vw',
+        //                         cursor: 'pointer',
+        //                         '&:hover': {
+        //                             transition: 'transform 0.2s ease-in-out',
+        //                             transform: 'scale(1.2)',
+        //                         },
+        //                     }}
+        //                 />
+        //                 <LinkedInIcon
+        //                     fontSize="large"
+        //                     sx={{
+        //                         color: 'white',
+        //                         cursor: 'pointer',
+        //                         '&:hover': {
+        //                             transition: 'transform 0.2s ease-in-out',
+        //                             transform: 'scale(1.2)',
+        //                         },
+        //                     }}
+        //                 />
+        //             </Box>
+        //         </Grid>
+        //     </Grid>
+        // </Grid>
     )
 }
