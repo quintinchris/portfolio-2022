@@ -1,5 +1,5 @@
 import React from 'react'
-import './App.css'
+import './App.scss'
 import { Homepage } from './pages/Homepage/Homepage'
 import { ThemeProvider } from '@mui/material/styles'
 import { defaultTheme } from '../src/styles/theme'
